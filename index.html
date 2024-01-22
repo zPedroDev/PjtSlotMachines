@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Royale</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="gameContainer">
+        <h1>Casino Royale</h1>
+        <div class="slot-machine">
+            <div id="reel1" class="reel"></div>
+            <div id="reel2" class="reel"></div>
+            <div id="reel3" class="reel"></div>
+        </div>
+        <div id="result"></div>
+        <div id="coins">Moedas: <span id="coinCount">100</span></div>
+        <div id="playerName">Jogador: <span id="userName">...</span></div>
+        <input type="number" id="betAmount" placeholder="valor da aposta">
+        <button id="spinBtn" onclick="spinReels()">Girar</button>
+        <button onclick="showProfile()">Ver Perfil</button>
+    </div>
+
+    <div class="container" id="profileContainer" style="display: none;">
+        <div id="profile" class="profile">
+            <div class="profile-details">
+                <h2 id="userNameProfile">...</h2>
+                <button onclick="changeProfile()">Mudar perfil</button>
+                <button onclick="hideProfile()">Voltar ao jogo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
